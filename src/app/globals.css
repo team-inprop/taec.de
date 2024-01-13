@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Roboto+Slab&display=swap');
+
+:root {
+	--foreground-rgb: 25, 14, 5;
+	--background-start-rgb: 25, 14, 5;
+	--background-end-rgb: 25, 14, 5;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--foreground-rgb: 25, 14, 5;
+		--background-start-rgb: 25, 14, 5;
+		--background-end-rgb: 25, 14, 5;
+	}
+}
+
+body {
+	font-family: "RALEWAY", sans-serif!important;
+	color: #F2F2F2;
+	background-color: #1A0E05;
+}
+
+.concrete-box {
+	font-family: "ROBOTO SLAB", sans-serif!important;
+	height: 12.5rem;
+	width: 12.5rem;
+	background-color: #1A0E05;
+	border-color: #AEB7E5;
+	border-width: 0.4rem;
+	color: #B1ADAA;
+	.beton {
+		color: #F2F2F2;
+	}
+}
+
+.geliefert, .beton {
+	transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.concrete-box:hover {
+	.beton {
+		font-size: 2.5rem;
+	}
+	.geliefert {
+		color: #AEB7E5;
+		font-size: 1.15rem;
+	}
+}
+
+.construction-background-img {
+	background-image: linear-gradient(to bottom, rgba(25, 14, 5, 0.5), rgba(25, 14, 5, 1)), url('/generated_construction_image.png');
+}

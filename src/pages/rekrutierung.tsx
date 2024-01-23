@@ -1,4 +1,5 @@
-import Image from "next/image";
+import { ChangeEvent, useState } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import "../app/layout";
 import { Metadata } from "next";
@@ -8,6 +9,36 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+	const [message, setMessage] = useState<string>("");
+	const [contactInfo, setContactInfo] = useState<string>("");
+	const router = useRouter();
+
+	const handleMessageChange = (e: ChangeEvent) => setMessage((e.target as HTMLTextAreaElement).value);
+	const handleContactInfoChange = (e: ChangeEvent) => setContactInfo((e.target as HTMLInputElement).value);
+
+	const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
+		e.preventDefault();
+		const data = { message, contactInfo };
+
+		try {
+			const response = await fetch("https://replace-me/", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify(data),
+			});
+
+			if (response.ok) {
+				router.push("/");
+			} else {
+				console.error("Failed to send data");
+			}
+		} catch (error) {
+			console.error("Error sending data:", error);
+		}
+	};
+
 	return (
 		<div className="flex flex-col relative bg-cover bg-center bg-no-repeat h-screen">
 			<header className="flex justify-between md:justify-evenly items-center p-6">
@@ -21,12 +52,16 @@ export default function Home() {
 			</header>
 			<main className="flex justify-between md:justify-evenly items-start p-6">
 				<div className="mb-6">
-					<h1 className="text-4xl font-bold">Mitgründer(in) gesucht!</h1>
-					<h3 className="text-xl font-bold">Mit dem Studium (so gut wie) fertig?</h3>
+					<h1 className="text-3xl md:text-4xl font-bold">Mitgründer(in) gesucht!</h1>
+					<h3 className="text-lg md:text-xl font-bold">Mit dem Studium (so gut wie) fertig?</h3>
 					<br />
-					<p>Hast du Lust, deine Karriere nach dem Studium ambitioniert fortzusetzen? Gründe<br /> doch mit uns!</p>
+					<p>Hast du Lust, deine Karriere nach dem Studium ambitioniert fortzusetzen? Gründe <br className="hidden md:block" /> doch mit uns!</p>
 					<br />
-					<p>Wir sind Fabian und Patrick und haben uns Mitte Januar 2024 das Berliner Startup<br /> Stipendium erfolgreich beworben. Dieses startet Februar 2024 und läuft für ein Jahr<br /> (bis Februar 2025), daraufhin führen wir (mit dir?) das Unternehmen und können von<br /> dort Gehalt beziehen. In das Stipendium können wir auch noch ein weiteres Mitglied<br /> einführen - zum Beispiel dich!</p>
+					<p>Wir sind Fabian und Patrick und haben uns Mitte Januar 2024 das Berliner Startup <br className="hidden md:block" /> Stipendium erfolgreich beworben. Dieses startet Februar 2024 und läuft für ein Jahr <br className="hidden md:block" />
+						(bis Februar 2025), daraufhin führen wir (mit dir?) das Unternehmen und können von <br className="hidden md:block" />
+						dort Gehalt beziehen. In das Stipendium können wir auch noch ein weiteres Mitglied <br className="hidden md:block" />
+						einführen - zum Beispiel dich!
+					</p>
 					<br />
 					<h3 className="text-xl font-bold">Was du machst</h3>
 					<br />
@@ -51,47 +86,46 @@ export default function Home() {
 					<h3 className="text-xl font-bold">Was ist TAEC eigentlich?</h3>
 					<p>Es gibt in der Baubranche die <span className="font-bold">Bauplanung</span> und die <span className="font-bold">Bauausführung</span>.</p>
 					<br />
-					<p>In der <span className="font-bold">Bauplanung</span> arbeiten Architekten, Statiker, etc. daran, dass das Gebäude,<br />
+					<p>In der <span className="font-bold">Bauplanung</span> arbeiten Architekten, Statiker, etc. daran, dass das Gebäude, <br className="hidden md:block" />
 						heutzutage via 3D-Modell, als Konzept entsteht.
 					</p>
 					<br />
-					<p>In der <span className="font-bold">Bauausführung</span> wird das Konzept dann realisiert - Auf der Baustelle. Stand jetzt<br />
-						gibt es viel Software, die mit dem 3D-Modell in der Planung umgeht. Das 3D-Modell auf<br />
+					<p>In der <span className="font-bold">Bauausführung</span> wird das Konzept dann realisiert - Auf der Baustelle. Stand jetzt <br className="hidden md:block" />
+						gibt es viel Software, die mit dem 3D-Modell in der Planung umgeht. Das 3D-Modell auf <br className="hidden md:block" />
 						der Baustelle zu nutzen ist allerdings tatsächlich ein grundlegend neuer Ansatz.
 					</p>
 					<br />
 					
-					<p>Wir nutzen das 3D-Modell und organisieren auf der Baustelle übliche Ressourcen über<br />
-						unsere Website, sodass Bauleiter und Vorarbeiter einen besseren Überblick über<br />
+					<p>Wir nutzen das 3D-Modell und organisieren auf der Baustelle übliche Ressourcen über <br className="hidden md:block" />
+						unsere Website, sodass Bauleiter und Vorarbeiter einen besseren Überblick über <br className="hidden md:block" />
 						Termine haben und diese bspw. besser verschieben können.
 					</p>
 					<br />
 
 					<h3 className="text-xl font-bold">Wie viel verdienst du?</h3>
-					<p>Das <span className="font-bold">Berliner Startup Stipendium</span> zahlt <span className="font-bold">2.200€ brutto</span> pro <span className="font-bold">Monat</span> bis zum Februar 2025<br />
-						aus. Daraufhin beziehen wir über das entstehende Unternehmen TAEC Gehalt - hier<br />
-						setzen wir für alle Gründer(innen) zZ anfangs ein Gehalt von <span className="font-bold">55.000€ brutto</span> pro <span className="font-bold">Jahr</span><br />
-						an - das kann aber natürlich (für alle) variieren, je nach Investorensituation und<br />
-						Finanzprojektionen (die du dann erstellen würdest) 😄
+					<p>Das <span className="font-bold">Berliner Startup Stipendium</span> zahlt <span className="font-bold">2.200€ brutto</span> pro <span className="font-bold">Monat</span> bis zum Februar 2025 <br className="hidden md:block" />
+						aus. Daraufhin beziehen wir über das entstehende Unternehmen TAEC Gehalt - hier <br className="hidden md:block" />
+						setzen wir für alle Gründer(innen) zZ anfangs ein Gehalt von <span className="font-bold">55.000€ brutto</span> pro <span className="font-bold">Jahr</span> <br className="hidden md:block" />
+						an - das kann aber natürlich (für alle) variieren, je nach Investorensituation und <br className="hidden md:block" />Finanzprojektionen (die du dann erstellen würdest) 😄
 					</p>
 					<br />
 					<p>Anteile sind als Mitgründer(in) selbstverständlich auch dabei.</p>
 					<br />
-					<h3>Schreib uns doch gerne, wenn du mehr wissen willst oder<br /> einfach mit uns reden möchtest 🙂</h3>
-					{/* <br /> */}
-					{/* <div className="contact-form">
-						<p className="text-2xl text-center mb-2">Beschreiben Sie Ihr Anliegen</p>
-						<textarea style={{ resize: "none" }} className="w-full rounded-lg p-3" rows={4} placeholder="Unterstützt TAEC auch Mauerwerksbestellungen?"></textarea>
-						<div className="flex flex-wrap">
+					<h3>Schreib uns doch gerne, wenn du mehr wissen willst oder<br className="hidden md:block" /> einfach mit uns reden möchtest 🙂</h3>
+					<br />
+					<div className="contact-form">
+						<p style={{ fontWeight: 600 }} className="text-2xl text-center mb-2">Beschreiben Sie Ihr Anliegen</p>
+						<textarea onChange={handleMessageChange} style={{ resize: "none" }} className="w-full rounded-lg p-3" rows={4} placeholder="Unterstützt TAEC auch Mauerwerksbestellungen?"></textarea>
+						<div className="mt-3 flex flex-wrap">
 							<div className="w-full md:w-1/2 md:pe-1">
-								<label htmlFor="contact-form-sender" className="text-xl">Wie können wir Sie erreichen?</label>
-								<input id="contact-form-sender" placeholder="Ihre E-Mail oder Telefonnummer..." className="contact-form-sender p-2 w-full" type="email" />
+								<label style={{ fontWeight: 600 }} htmlFor="contact-form-sender" className="text-2xl">Wie können wir Sie erreichen?</label>
+								<input id="contact-form-sender" onChange={handleContactInfoChange} placeholder="Ihre E-Mail oder Telefonnummer..." className="contact-form-sender p-2 w-full" type="email" />
 							</div>
-							<div className="mt-4 w-full md:w-1/2 md:ps-1">
-								<button className="contact-form-btn w-full h-full" type="submit">Kontaktieren</button>
+							<div className="w-full md:w-1/2 md:ps-1 mt-3 md:mt-0">
+								<button className="contact-form-btn text-2xl md:text-3xl w-full h-full" onClick={handleSubmit} type="submit">Kontaktieren</button>
 							</div>
 						</div>
-					</div> */}
+					</div>
 
 				</div>
 			</main>

@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--foreground-rgb: 25, 14, 5;
+	--background-start-rgb: 25, 14, 5;
+	--background-end-rgb: 25, 14, 5;
+}
+
+html {
+	scroll-behavior: smooth;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+}
+
+@font-face {
+	font-family: "Roboto Slab";
+	src: url("/fonts/RobotoSlab-Regular.ttf");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Raleway";
+	src: url("/fonts/Raleway-Regular.ttf");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+body {
+	font-family: Raleway, sans-serif!important;
+	font-weight: 300;
+	color: #F2F2F2;
+	background-color: #1A0E05;
+	letter-spacing: 0.25px;
+}
+
+.concrete-box {
+	font-family: "Roboto Slab";
+	font-weight: 500;
+	height: 13rem;
+	width: 13rem;
+	background-color: #1A0E05;
+	border-color: #AEB7E5;
+	border-width: 0.4rem;
+	color: #B1ADAA;
+	.beton {
+		color: #F2F2F2;
+	}
+}
+
+.concrete-box, .geliefert, .beton {
+	-webkit-transition: color 0.3s ease, font-size 0.3s ease;
+	transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+@media (max-width: 767px) {
+	.concrete-box:hover {
+		color: #f2f2f2;
+		.geliefert {
+			color: #AEB7E5;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+    .concrete-box:hover {
+		color: #f2f2f2;
+        .beton {
+            font-size: 2.5rem;
+        }
+        .geliefert {
+            color: #AEB7E5;
+            font-size: 1.15rem;
+        }
+    }
+}
+
+input, textarea {
+	color: black;
+}
+
+.construction-background-img {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-image: linear-gradient(to bottom, rgba(25, 14, 5, 0.5), rgba(25, 14, 5, 1)), url("/generated_construction_image.png");
+}
+
+.footer-bg-color {
+	background-color: #69503C;
+}
+
+.screenshot-bg {
+	background-color: #A9A9A9;
+}
+
+.kontakt-border {
+	border-radius: 1.25rem;
+	border: 5px dashed #69503C;
+	font-family: "Roboto Slab", sans-serif!important;
+}
+
+.kontakt-btn-border {
+	border-radius: 0.3rem;
+	border: 2px dashed #69503C;
+	letter-spacing: 3px;
+}
+
+.footer {
+	font-weight: 500;
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #7e6456; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #b89e8e; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #b89e8e;
+}
+
+ul.dashed-list {
+	list-style-type: none;
+}
+
+ul.dashed-list > li:before {
+	content: "- ";
+}
+
+.contact-form-btn {
+	min-height: 50px;
+	background-color: #69503C;
+	border-radius: 0.5rem;
+}
+
+.contact-form-sender {
+	border-radius: 0.5rem;
+}
+
+.small-info-cards {
+	font-family: "Roboto Slab", sans-serif;
+	bottom: 4%;
+	right: -68.75%;
+	.lieferschein {
+		background-color: #656D46;
+	}
+	.rechnung-felt {
+		background-color: #56504C;
+		opacity: 0.5;
+	}
+}

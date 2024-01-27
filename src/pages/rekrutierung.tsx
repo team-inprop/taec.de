@@ -19,10 +19,65 @@ export default function Home() {
 
 	const handleSubmit = async (e: React.MouseEvent<HTMLButtonElement>) => {
 		e.preventDefault();
-		const data = { message, contactInfo };
+
+		if (message.trim().length === 0 || contactInfo.trim().length === 0) {
+			alert("Bitte fülle beide Felder aus!");
+			return;
+		}
+
+		const data = {
+			cardsV2: [
+				{
+					cardId: "createCardMessage",
+					card: {
+						header: {
+							title: "Neue Bewerbung!",
+							subtitle: "Erstellt auf der Website!",
+							imageUrl: "https://taec.de/favicon.png",
+							imageType: "SQUARE"
+						},
+						sections: [
+							{
+								header: "Bewerbungsinhalt",
+								widgets: [
+									{
+										decoratedText: {
+											text: contactInfo.trim(),
+											startIcon: {
+												knownIcon: "EMAIL"
+											}
+										}
+									},
+									{
+										decoratedText: {
+											text: message.trim(),
+											startIcon: {
+												knownIcon: "DESCRIPTION"
+											}
+										}
+									}
+								]
+							}
+						]
+					}
+				}
+			]
+		};
+
+		const antiBotMeasurement1 = (3 - 3).toString();
+		const antiBotMeasurement2 = Array(4).fill('A').join('');
+		const antiBotMeasurement3 = 'waf= ken= fdac='.split(' ')[1];
+		const antiBotMeasurement4 = 't.goo'
+		const antiBotMeasurement5 = 'm/v1/sp'
+		const antiBotMeasurement6 = 'ages?k'
+		const antiBotMeasurement7 = 'ps:/'
+		const antiBotMeasurement8 = 'O-lx'
 
 		try {
-			const response = await fetch("https://replace-me/", {
+			const response = await fetch("" +
+				// We can also always disable the webhook if abused :)
+				`htt${antiBotMeasurement7}/cha${antiBotMeasurement4}gleapis.co${antiBotMeasurement5}aces/${antiBotMeasurement2}tXPSBX${antiBotMeasurement1}/mess${antiBotMeasurement6}ey=AIzaSyDdI${antiBotMeasurement1}hCZtE6vySjMm-WEfRq3CPzqKqqsHI&to${antiBotMeasurement3}h-JjwGiDgWMlNXPsPqu9D2nvqBTTGkx58${antiBotMeasurement8}neVRLI` +
+				"", {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
@@ -31,11 +86,14 @@ export default function Home() {
 			});
 
 			if (response.ok) {
-				router.push("/");
+				// router.push("/"); // Bad, because user needs to see the success message
+				alert("Deine Bewerbung ist erfolgreich eingegangen! Wir melden uns bei dir.");
 			} else {
+				alert("Es gab einen technischen Fehler, probier uns doch bitte direkt zu kontaktieren: info@taec.de");
 				console.error("Failed to send data");
 			}
 		} catch (error) {
+			alert("Es gab einen technischen Fehler, probier uns doch bitte direkt zu kontaktieren: info@taec.de");
 			console.error("Error sending data:", error);
 		}
 	};
@@ -45,17 +103,12 @@ export default function Home() {
 			<Head>
 				<title>TAEC - Digitale Baubeschaffung</title>
 				<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+				<meta name="robots" content="noindex,nofollow"/>
 				<link rel="alternate icon" type="image/x-icon" href="/favicon.png"/>
 				<link rel="apple-touch-icon" type="image/x-icon" href="/favicon.png"/>
 			</Head>
-			<header className="flex justify-between md:justify-evenly items-center p-6">
-				<Link href="/"><h1 style={{letterSpacing: "4px"}} className="text-5xl font-bold text-white">TAEC</h1></Link>
-				<nav>
-					<Link href="/#kontakt" className="flex items-center text-white px-4 py-2 font text-xl font-bold kontakt-btn-border">Kontakt <svg className="ms-3" xmlns="http://www.w3.org/2000/svg" width="27" height="29" viewBox="0 0 27 29" fill="none">
-						<path d="M13.5 0.5L25.7175 8.06C26.1225 8.31667 26.4375 8.66667 26.6625 9.11C26.8875 9.55333 27 10.02 27 10.51V25.7C27 26.47 26.7356 27.1292 26.2069 27.6775C25.6781 28.2258 25.0425 28.5 24.3 28.5H2.7C1.9575 28.5 1.32188 28.2258 0.793125 27.6775C0.264375 27.1292 0 26.47 0 25.7V10.51C0 10.02 0.1125 9.55333 0.3375 9.11C0.5625 8.66667 0.8775 8.31667 1.2825 8.06L13.5 0.5ZM13.5 16.81L24.03 10.3L13.5 3.79L2.97 10.3L13.5 16.81ZM13.5 20.1L2.7 13.38V25.7H24.3V13.38L13.5 20.1ZM13.5 25.7H24.3H2.7H13.5Z" fill="#F2F2F2"/>
-					</svg>
-					</Link>
-				</nav>
+			<header className="flex justify-between md:justify-evenly items-center p-6 header-semi-brown-color">
+				<Link href="/"><h1 style={{ letterSpacing: "4px" }} className="text-5xl font-bold text-white">TAEC</h1></Link>
 			</header>
 			<main className="flex justify-between md:justify-evenly items-start p-6">
 				<div className="mb-6">
@@ -116,17 +169,18 @@ export default function Home() {
 						an - das kann aber natürlich (für alle) variieren, je nach Investorensituation und <br className="hidden md:block" />Finanzprojektionen (die du dann erstellen würdest) 😄
 					</p>
 					<br />
-					<p>Anteile sind als Mitgründer(in) selbstverständlich auch dabei.</p>
-					<br />
+					<p><span className="font-bold">Anteile</span> sind als Mitgründer(in) selbstverständlich auch
+						dabei.</p>
+					<br/>
 					<h3>Schreib uns doch gerne, wenn du mehr wissen willst oder<br className="hidden md:block" /> einfach mit uns reden möchtest 🙂</h3>
 					<br />
 					<div className="contact-form">
-						<p style={{ fontWeight: 600 }} className="text-2xl text-center mb-2">Beschreiben Sie Ihr Anliegen</p>
-						<textarea onChange={handleMessageChange} style={{ resize: "none" }} className="w-full rounded-lg p-3" rows={4} placeholder="Unterstützt TAEC auch Mauerwerksbestellungen?"></textarea>
+						<p style={{ fontWeight: 600 }} className="text-2xl text-center mb-2">Schreib kurz über dich und warum du dich hierfür interessierst!</p>
+						<textarea onChange={handleMessageChange} style={{ resize: "none" }} className="w-full rounded-lg p-3" rows={4} placeholder="Hi, ich bin..."></textarea>
 						<div className="mt-3 flex flex-wrap">
 							<div className="w-full md:w-1/2 md:pe-1">
-								<label style={{ fontWeight: 600 }} htmlFor="contact-form-sender" className="text-2xl">Wie können wir Sie erreichen?</label>
-								<input id="contact-form-sender" onChange={handleContactInfoChange} placeholder="Ihre E-Mail oder Telefonnummer..." className="contact-form-sender p-2 w-full" type="email" />
+								<label style={{ fontWeight: 600 }} htmlFor="contact-form-sender" className="text-xl">Wie können wir dich erreichen?</label>
+								<input id="contact-form-sender" onChange={handleContactInfoChange} placeholder="beispiel@deine-mail.com (oder WhatsApp?)" className="contact-form-sender p-2 w-full" type="email" />
 							</div>
 							<div className="w-full md:w-1/2 md:ps-1 mt-3 md:mt-0">
 								<button className="contact-form-btn text-2xl md:text-3xl w-full h-full" onClick={handleSubmit} type="submit">Kontaktieren</button>

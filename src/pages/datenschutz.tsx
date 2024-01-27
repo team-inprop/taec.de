@@ -38,7 +38,7 @@ export default function Home() {
 					<h3 className="text-xl font-bold">Werden meine persönlichen Daten identifizierbar gespeichert?</h3>
 					<br />
 					<p>Alle Daten sind anonymisiert und diese anonymisierten Daten mit den renommierten<br /> Sicherheitsvorkehrungen von Google in bester Hand.</p>
-					<p>Die Daten aus Google Analytics werden nur aggregiert ausgewertet. Das heißt, dass wir<br /> im Regelfall nicht feststellen können, in welchem Unternehmen Sie arbeiten, nur weil<br /> Sie unsere Website besuchen.Dies ist auch nicht unsere Absicht.
+					<p>Die Daten aus Google Analytics werden nur aggregiert ausgewertet. Das heißt, dass wir<br /> im Regelfall nicht feststellen können, in welchem Unternehmen Sie arbeiten, nur weil<br /> Sie unsere Website besuchen. Dies ist auch nicht unsere Absicht.
 					</p>
 					<br />
 					<p>Aus demselben Grund können wir auch so gut wie keine Daten löschen - bis auf den<br /> Mailverkehr! Falls Sie diesen aus unserem Mailpostfach entfernt haben möchten,<br /> schreiben Sie uns eine Mail diesbezüglich, wir schicken Ihnen dann eine<br /> Bestätigungsmail und löschen daraufhin den gesamten Mailverkehr mit Ihnen.</p>

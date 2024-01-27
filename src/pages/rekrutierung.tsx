@@ -104,6 +104,8 @@ export default function Home() {
 				<title>TAEC - Digitale Baubeschaffung</title>
 				<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 				<meta name="robots" content="noindex,nofollow"/>
+				<link rel="alternate icon" type="image/x-icon" href="/favicon.png"/>
+				<link rel="apple-touch-icon" type="image/x-icon" href="/favicon.png"/>
 			</Head>
 			<header className="flex justify-between md:justify-evenly items-center p-6 header-semi-brown-color">
 				<Link href="/"><h1 style={{ letterSpacing: "4px" }} className="text-5xl font-bold text-white">TAEC</h1></Link>

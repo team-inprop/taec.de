@@ -21,7 +21,7 @@ export default function Home() {
 		e.preventDefault();
 
 		if (message.trim().length === 0 || contactInfo.trim().length === 0) {
-			alert("Bitte fülle alle Felder aus!");
+			alert("Bitte fülle beide Felder aus!");
 			return;
 		}
 

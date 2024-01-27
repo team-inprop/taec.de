@@ -44,6 +44,7 @@ export default function Home() {
 		<div className="flex flex-col relative bg-cover bg-center bg-no-repeat h-screen">
 			<Head>
 				<title>TAEC - Digitale Baubeschaffung</title>
+				<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 			</Head>
 			<header className="flex justify-between md:justify-evenly items-center p-6">
 				<Link href="/"><h1 style={{ letterSpacing: "4px" }} className="text-5xl font-bold text-white">TAEC</h1></Link>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import "../app/layout";
 import { Metadata } from "next";
+import Head from "next/head";
 
 export const metadata: Metadata = {
 	title: "TAEC"
@@ -10,6 +11,9 @@ export const metadata: Metadata = {
 export default function Home() {
 	return (
 		<div className="flex flex-col relative bg-cover bg-center bg-no-repeat h-screen">
+			<Head>
+				<title>TAEC - Digitale Baubeschaffung</title>
+			</Head>
 			<header className="flex justify-between md:justify-evenly items-center p-6">
 				<Link href="/"><h1 style={{ letterSpacing: "4px" }} className="text-5xl font-bold text-white">TAEC</h1></Link>
 				<nav>

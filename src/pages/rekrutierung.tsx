@@ -102,13 +102,18 @@ export default function Home() {
 		<div className="flex flex-col relative bg-cover bg-center bg-no-repeat h-screen">
 			<Head>
 				<title>TAEC - Digitale Baubeschaffung</title>
+				<meta property="og:site_name" content="TAEC"/>
+				<meta property="og:description"
+					  content="Wir bringen das BIM-Modell auf die Baustelle! Erfahren Sie, wie wir Prozesse und Liefertermine mit Ihrem Modell verknüpfen."/>
+				<meta property="og:type" content="website"/>
 				<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 				<meta name="robots" content="noindex,nofollow"/>
 				<link rel="alternate icon" type="image/x-icon" href="/favicon.png"/>
 				<link rel="apple-touch-icon" type="image/x-icon" href="/favicon.png"/>
 			</Head>
 			<header className="flex justify-between md:justify-evenly items-center p-6 header-semi-brown-color">
-				<Link href="/"><h1 style={{ letterSpacing: "4px" }} className="text-5xl font-bold text-white">TAEC</h1></Link>
+				<Link href="/"><h1 style={{letterSpacing: "4px"}} className="text-5xl font-bold text-white">TAEC</h1>
+				</Link>
 			</header>
 			<main className="flex justify-between md:justify-evenly items-start p-6">
 				<div className="mb-6">

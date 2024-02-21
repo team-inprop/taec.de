@@ -1,5 +1,4 @@
 import { ChangeEvent, useState } from "react";
-import { useRouter } from "next/router";
 import Link from "next/link";
 import "../app/layout";
 import { Metadata } from "next";
@@ -12,7 +11,6 @@ export const metadata: Metadata = {
 export default function Home() {
 	const [message, setMessage] = useState<string>("");
 	const [contactInfo, setContactInfo] = useState<string>("");
-	const router = useRouter();
 
 	const handleMessageChange = (e: ChangeEvent) => setMessage((e.target as HTMLTextAreaElement).value);
 	const handleContactInfoChange = (e: ChangeEvent) => setContactInfo((e.target as HTMLInputElement).value);

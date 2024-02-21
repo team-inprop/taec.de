@@ -42,8 +42,8 @@ export default function Home() {
 							<div className="block mx-auto pt-3">
 								<svg width="161" height="20" viewBox="0 0 161 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<circle cx="10" cy="10" r="9.5" fill="#DFC3B0"/>
-									<path d="M19.5 10L141.5 9.99999" stroke="#DFC3B0" stroke-opacity="0.4" stroke-width="3" stroke-dasharray="3 3"/>
-									<circle cx="151" cy="10" r="7.5" fill="#1C0E05" stroke="#967A6A" stroke-width="4"/>
+									<path d="M19.5 10L141.5 9.99999" stroke="#DFC3B0" strokeOpacity="0.4" strokeWidth="3" strokeDasharray="3 3"/>
+									<circle cx="151" cy="10" r="7.5" fill="#1C0E05" stroke="#967A6A" strokeWidth="4"/>
 								</svg>
 								<div className="flex justify-between h-1/3">
 									<span>12:00</span>
@@ -66,11 +66,11 @@ export default function Home() {
 						</div>
 						<div className="hidden md:block absolute small-info-cards md:text-normal">
 							<div className="lieferschein flex px-1">
-								<Image src="./document.svg" alt="document" width={11} height={11} />
+								<Image src="/document.svg" alt="document" width={11} height={11} />
 								&nbsp;Lieferschein
 							</div>
 							<div className="rechnung-felt flex px-1">
-								<Image src="./document.svg" alt="document" width={11} height={11} />
+								<Image src="/document.svg" alt="document" width={11} height={11} />
 								&nbsp;Rechnung fehlt
 							</div>
 						</div>
@@ -81,25 +81,25 @@ export default function Home() {
 					<div className="flex flex-wrap justify-evenly md:px-48">
 						<div className="text-center mx-5">
 							<div className="p-4 justify-center flex">
-								<Image priority src="./icon.svg" width={50} height={50} alt="icon" />
+								<Image priority src="/icon.svg" width={50} height={50} alt="icon" />
 							</div>
 							<p style={{ letterSpacing: "1.25px" }} className="font-bold text-2xl">Baupläne</p>
 						</div>
 						<div className="text-center mx-5">
 							<div className="p-4 justify-center flex">
-								<Image priority src="./icon.svg" width={50} height={50} alt="icon" />
+								<Image priority src="/icon.svg" width={50} height={50} alt="icon" />
 							</div>
 							<p style={{ letterSpacing: "1.25px" }} className="font-bold text-2xl">Termine</p>
 						</div>
 						<div className="text-center mx-5">
 							<div className="p-4 justify-center flex">
-								<Image priority src="./icon.svg" width={50} height={50} alt="icon" />
+								<Image priority src="/icon.svg" width={50} height={50} alt="icon" />
 							</div>
 							<p style={{ letterSpacing: "1.25px" }} className="font-bold text-2xl">Lieferscheine</p>
 						</div>
 						<div className="text-center mx-5">
 							<div className="p-4 justify-center flex">
-								<Image priority src="./icon.svg" width={50} height={50} alt="icon" />
+								<Image priority src="/icon.svg" width={50} height={50} alt="icon" />
 							</div>
 							<p style={{ letterSpacing: "1.25px" }} className="font-bold text-2xl">Rechnungen</p>
 						</div>
@@ -108,7 +108,7 @@ export default function Home() {
 				</div>
 			</main>
 			<div className="flex items-center justify-around screenshot-bg">
-				<Image priority alt="Bildschirmfoto" width={1000} height={100} src="./screenshot.png" />
+				<Image priority alt="Bildschirmfoto" width={1000} height={100} src="/screenshot.png" />
 			</div>
 			<div className="flex flex-col items-center justify-center relative rounded-[55px]">
 				<div className="relative flex-1 text-center py-12 px-4 text-4xl md:text-6xl">

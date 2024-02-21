@@ -1,6 +1,6 @@
 import { ChangeEvent, useState } from "react";
 import Link from "next/link";
-import "../app/layout";
+import "../src/app/layout";
 import { Metadata } from "next";
 import Head from "next/head";
 

@@ -1,14 +1,9 @@
 import { ChangeEvent, useState } from "react";
-import Link from "next/link";
-import "../app/layout";
-import { Metadata } from "next";
 import Head from "next/head";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
-export const metadata: Metadata = {
-	title: "TAEC"
-};
-
-export default function Home() {
+const Rekrutierung: React.FC = () => {
 	const [message, setMessage] = useState<string>("");
 	const [contactInfo, setContactInfo] = useState<string>("");
 
@@ -84,7 +79,6 @@ export default function Home() {
 			});
 
 			if (response.ok) {
-				// router.push("/"); // Bad, because user needs to see the success message
 				alert("Deine Bewerbung ist erfolgreich eingegangen! Wir melden uns bei dir.");
 			} else {
 				alert("Es gab einen technischen Fehler, probier uns doch bitte direkt zu kontaktieren: info@taec.de");
@@ -99,20 +93,11 @@ export default function Home() {
 	return (
 		<div className="flex flex-col relative bg-cover bg-center bg-no-repeat h-screen">
 			<Head>
-				<title>TAEC - Digitale Baubeschaffung</title>
-				<meta property="og:site_name" content="TAEC"/>
-				<meta property="og:description"
-					  content="Wir bringen das BIM-Modell auf die Baustelle! Erfahren Sie, wie wir Prozesse und Liefertermine mit Ihrem Modell verknüpfen."/>
-				<meta property="og:type" content="website"/>
-				<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 				<meta name="robots" content="noindex,nofollow"/>
-				<link rel="alternate icon" type="image/x-icon" href="/favicon.png"/>
-				<link rel="apple-touch-icon" type="image/x-icon" href="/favicon.png"/>
 			</Head>
-			<header className="flex justify-between md:justify-evenly items-center p-6 header-semi-brown-color">
-				<Link href="/"><h1 style={{letterSpacing: "4px"}} className="text-5xl font-bold text-white">TAEC</h1>
-				</Link>
-			</header>
+
+			<Header />
+
 			<main className="flex justify-between md:justify-evenly items-start p-6">
 				<div className="mb-6">
 					<h1 className="text-3xl md:text-4xl font-bold">Mitgründer(in) gesucht!</h1>
@@ -193,15 +178,10 @@ export default function Home() {
 
 				</div>
 			</main>
-			<div className="mt-auto footer flex items-end justify-between md:justify-evenly p-6 md:p-12 footer-bg-color">
-				<div>
-					<p><Link href="/impressum">Impressum</Link></p>
-					<p><Link href="/datenschutz">Datenschutz</Link></p>
-				</div>
-				<div>
-					<p>TAEC 2024</p>
-				</div>
-			</div>
+
+			<Footer />
 		</div>
 	);
 };
+
+export default Rekrutierung;

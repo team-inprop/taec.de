@@ -41,11 +41,11 @@ const Home: React.FC = () => {
 						</div>
 						<div className="hidden md:block absolute small-info-cards md:text-normal">
 							<div className="lieferschein flex px-1">
-								<Image src="/document.svg" alt="document" width={11} height={11} />
+								<Image src="/media/document.svg" alt="document" width={11} height={11} />
 								&nbsp;Lieferschein
 							</div>
 							<div className="rechnung-felt flex px-1">
-								<Image src="/document.svg" alt="document" width={11} height={11} />
+								<Image src="/media/document.svg" alt="document" width={11} height={11} />
 								&nbsp;Rechnung fehlt
 							</div>
 						</div>
@@ -56,25 +56,25 @@ const Home: React.FC = () => {
 					<div className="flex flex-wrap justify-evenly md:px-48">
 						<div className="text-center mx-5">
 							<div className="p-4 justify-center flex">
-								<Image priority src="/icon.svg" width={50} height={50} alt="icon" />
+								<Image src="/media/icon.svg" width={50} height={50} alt="icon" />
 							</div>
 							<p style={{ letterSpacing: "1.25px" }} className="font-bold text-2xl">Baupläne</p>
 						</div>
 						<div className="text-center mx-5">
 							<div className="p-4 justify-center flex">
-								<Image priority src="/icon.svg" width={50} height={50} alt="icon" />
+								<Image src="/media/icon.svg" width={50} height={50} alt="icon" />
 							</div>
 							<p style={{ letterSpacing: "1.25px" }} className="font-bold text-2xl">Termine</p>
 						</div>
 						<div className="text-center mx-5">
 							<div className="p-4 justify-center flex">
-								<Image priority src="/icon.svg" width={50} height={50} alt="icon" />
+								<Image src="/media/icon.svg" width={50} height={50} alt="icon" />
 							</div>
 							<p style={{ letterSpacing: "1.25px" }} className="font-bold text-2xl">Lieferscheine</p>
 						</div>
 						<div className="text-center mx-5">
 							<div className="p-4 justify-center flex">
-								<Image priority src="/icon.svg" width={50} height={50} alt="icon" />
+								<Image src="/media/icon.svg" width={50} height={50} alt="icon" />
 							</div>
 							<p style={{ letterSpacing: "1.25px" }} className="font-bold text-2xl">Rechnungen</p>
 						</div>
@@ -83,7 +83,7 @@ const Home: React.FC = () => {
 				</div>
 			</main>
 			<div className="flex items-center justify-around screenshot-bg">
-				<Image priority alt="Bildschirmfoto" width={1000} height={100} src="/screenshot.png" />
+				<Image alt="Bildschirmfoto" width={1000} height={100} src="/media/screenshot.png" />
 			</div>
 			<div className="flex flex-col items-center justify-center relative rounded-[55px]">
 				<div className="relative flex-1 text-center py-12 px-4 text-4xl md:text-6xl">

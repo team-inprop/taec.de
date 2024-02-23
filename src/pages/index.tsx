@@ -83,7 +83,7 @@ const Home: React.FC = () => {
 				</div>
 			</main>
 			<div className="flex items-center justify-around screenshot-bg">
-				<Image placeholder="blur" alt="Bildschirmfoto" width={1000} height={100} src="/media/screenshot.png" />
+				<Image alt="Bildschirmfoto" width={1000} height={100} src="/media/screenshot.png" />
 			</div>
 			<div className="flex flex-col items-center justify-center relative rounded-[55px]">
 				<div className="relative flex-1 text-center py-12 px-4 text-4xl md:text-6xl">

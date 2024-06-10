@@ -1,0 +1,19 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 498 548" width="498" height="548">
+	<title>InpropLogo_Lavendar</title>
+	<defs>
+		<image  width="498" height="548" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfIAAAIkAQMAAADf0Ds8AAAAAXNSR0IB2cksfwAAAANQTFRF////p8QbyAAAAIFJREFUeJztyzENAAAMA6DVv+mJ6NUEfnKd+L7v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+77v+74/9x94HQIlTg+2tAAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+		.s0 { fill: none;stroke: #7469b6;stroke-miterlimit:100;stroke-width: 14 } 
+		.s1 { fill: #a8cd9f } 
+	</style>
+	<use id="Layer 3" href="#img1" x="0" y="0"/>
+	<g id="raw">
+		<path id="Shape 1" class="s0" d="m108 362.3v-256.6l92.5-85.7v334.8h-39.8v-200.7h72.9l67.9 152.5h16.9v-152.5h70.2v200.5l-155 0.2v-91.3"/>
+		<path id="Layer 2" class="s1" d="m158.7 119.7h8v8h-8zm10 0h8v8h-8zm-10-10h8v8h-8zm10 0h8v8h-8z"/>
+		<path id="Layer 2 copy" class="s1" d="m158.7 92.7h8v8h-8zm10 0h8v8h-8zm-10-10h8v8h-8zm10 0h8v8h-8z"/>
+		<path id="Layer 2 copy 2" class="s1" d="m345.7 186.7h8v8h-8zm10 0h8v8h-8zm-10-10h8v8h-8zm10 0h8v8h-8z"/>
+		<path id="Layer 2 copy 5" class="s1" d="m345.7 216.7h8v8h-8zm10 0h8v8h-8zm-10-10h8v8h-8zm10 0h8v8h-8z"/>
+		<path id="InProp" class="s1" aria-label="InProp"  d="m2.4 504h26v-106.7h-26zm103.4 0h25.8v-49.6c0-22.8-13-36.1-32.7-36.1-11.4 0-20.5 5-25.6 12.1v-11.2h-26v84.8h26v-46.1c0-11.5 6.3-17.9 16.2-17.9 9.9 0 16.3 6.4 16.3 17.9zm69.9-58.9v-26.8h14.1c10.4 0 14.8 5.2 14.8 13.4 0 8.2-4.4 13.4-14.8 13.4zm55.4-13.4c0-19.6-13.1-34.4-39.2-34.4h-42.2v106.7h26v-38.3h16.2c27.2 0 39.2-16.4 39.2-34zm39.5 33c0-14.6 7.1-18.9 19.4-18.9h7.2v-27.5c-11.4 0-20.7 6.1-26.6 15.1v-14.2h-26v84.8h26zm122-3c0-26.9-19.1-43.6-44-43.6-24.8 0-44.1 16.7-44.1 43.6 0 26.9 18.8 43.6 43.8 43.6 24.9 0 44.3-16.7 44.3-43.6zm-61.7 0c0-14.4 8.2-21.1 17.7-21.1 9.1 0 17.6 6.7 17.6 21.1 0 14.3-8.7 21.1-17.9 21.1-9.5 0-17.4-6.8-17.4-21.1zm101.6-30.4v-12h-26v125.2h26v-52.2c4.7 7.1 13.6 13 26.1 13 20.8 0 37.4-17 37.4-43.8 0-26.7-16.6-43.4-37.4-43.4-12.5 0-21.4 5.8-26.1 13.2zm37.1 30.2c0 13.6-8.9 21.2-18.7 21.2-9.8 0-18.6-7.5-18.6-21 0-13.5 8.8-21 18.6-21 9.8 0 18.7 7.3 18.7 20.8z"/>
+	</g>
+</svg>

@@ -10,7 +10,7 @@ const ProductShiftNotice: React.FC = () => {
         <div>
           <p className="font-bold">Important Notice</p>
           <p className="text-2xl">
-            Our product has shifted towards <span className="font-bold">InProp</span>. Please visit our new website at{' '}
+            We have pivoted and renamed our project. We are happy to announce <span className="font-bold">InProp</span>. Please visit our new website at{' '}
             <a href="https://inprop.io" target="_blank" rel="noopener noreferrer" className="font-bold underline text-blue-600 hover:text-blue-800 visited:text-purple-600">
               inprop.io
             </a>{' '}
